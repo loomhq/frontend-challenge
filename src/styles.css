@@ -1,0 +1,46 @@
+body {
+  background: grey;
+  color: #333;
+}
+
+.main-title {
+  font-size: 32px;
+  padding: 21px 20px 15px 20px;
+}
+
+.news-item {
+  background: #f6f6ef;
+  padding: 21px 20px 15px 18px;
+  color: #828282;
+  clear: both;
+}
+
+.news-item > div {
+  margin: 0 0 23px 0;
+}
+
+.news-item > div div.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 13px;
+  color: #333;
+}
+
+.highlighted {
+  border: 2px solid orange;
+  padding: 10px;
+}
+
+.points {
+  float: left;
+  width: 15%;
+  text-align: center;
+  color: #333;
+  font-size: 40px;
+  border: 1px solid #333;
+}
+
+.item {
+  float: right;
+  width: 80%;
+}
