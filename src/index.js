@@ -7,6 +7,7 @@ const API = "https://api.hnpwa.com/v0/";
 
 function App() {
   const [newsItems, setItems] = React.useState([]);
+  // const [newsItem, setItem] = React.useState([]);
   const [isLoadingPage, setIsLoadingPage] = React.useState(false);
   const [page, setPage] = React.useState(1);
   const [hovered, setHovered] = React.useState(null);
@@ -97,11 +98,13 @@ function App() {
         onMouseEnter={e => setHovered(item.id)}
         onMouseLeave={e => setHovered(null)}
       >
-        <div className="points">{item.points}</div>
+        <div className="points">
+          <span className="orange">{item.points}</span>
+        </div>
         <div className="item">
           <div className="title">{item.title}</div>
           <div>
-            by {item.user} {item.time_ago}
+            by <span className="bold">{item.user}</span> {item.time_ago}
           </div>
           <div>{item.comments_count} comments</div>
         </div>
@@ -110,7 +113,7 @@ function App() {
   }
   return (
     <div className="App">
-      <div className="main-title">Hacker News</div>
+      <div id="main-title">Hacker News</div>
       <div className="filter">
         filter by points:
         <button onClick={() => setFilter("s")}>{"< 10"}</button>
